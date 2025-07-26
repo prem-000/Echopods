@@ -1,0 +1,225 @@
+@media screen{
+    
+   
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .logo img{
+        background-color: transparent !important;
+    }
+
+    .logo h1{
+       color: teal;
+       padding: 5px;
+    }
+
+    .selection{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .information{
+        margin: 20px;
+        
+    }
+
+    .cart-icon{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: rgb(179, 177, 177);
+        border: none;
+        cursor: pointer;  
+    }
+
+    .cart-icon i{
+        font-size: medium;
+    }
+
+    .cart-icon i:active{
+        animation: move 10s ease;
+    }
+    @keyframes move {
+        0%{
+            transform: translateX(2px);
+        }
+        50%{
+
+            transform:  translateY(-8px);
+        }
+        75%{
+            transform:  translateX(8px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(-6px);
+        }
+        
+    }
+
+    .user-icon{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: rgb(179, 177, 177);
+        border: none;
+        cursor: pointer;
+    }
+
+    .user-icon i{
+        font-size: medium;
+    } 
+
+    .user-icon:active{
+        transform: scale(1) rotate(360deg);
+        transition: transform 2s ease-out;
+
+    }
+
+
+    .information input{
+        height: 20px;
+        width: 180px;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        /*caret-shape: var();*/
+        animation: border-color 3s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes border-color {
+        0% {
+            border-color: #ff6ec4; /* pink */
+        }
+        25% {
+            border-color: #7873f5; /* purple-blue */
+        }
+        50% {
+            border-color: #00f9ff; /* cyan */
+        }
+        75% {
+            border-color: #39ff14; /* neon green */
+        }
+        100% {
+            border-color: #ff6ec4; /* back to pink */
+        }
+    }
+
+
+    .information i {
+    position: relative;
+    left: 0%;
+    top:18.8%;
+    transform: translateX(-200%);
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+    }
+
+    .cointainer {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .cointainer button{
+        background-color: whitesmoke;
+        border: none;
+        flex: 0 0 auto;
+        height: 200px;
+        width: 180px;
+        border-radius: 8%;
+        margin: 15px;
+        transform: scale(1.05);
+        transition: transform 0.1s;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cointainer button:hover{
+        transform: scale(1.2);
+        height: 205px;
+        border-radius: 10%;
+    }
+
+    .cointainer button1{
+        margin: 10px;
+    }
+
+    .cointainer button2{
+        background-color: #ccf8c5;
+        height: 20px;
+        width: 48px;
+        border-radius: 999px;
+        transform: translateY(-15px);
+        cursor: pointer;
+    }
+
+    .itemsinfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .itemsinfo button1{
+        height: 18px;
+        width: 50px;
+        border-radius: 999px;
+        background-color: rgb(161, 238, 67);
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: transform 1s ease;
+    }
+
+    .itemsinfo button:hover{
+        transform: scale(4);
+    }
+
+    .type-buds img{
+        height: 110px;
+        width: 180px;
+        object-fit: cover;
+        border-radius: inherit;
+        filter: brightness(1);
+        transform: translateY(-5px);
+    }
+
+    .type-buds img:hover{
+        transform: translateY(-10px);
+    }
+}
+
+.login-info{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    background-color: rgb(173, 216, 230);  
+    border-radius: 30px;
+}
+
+.details-info div{
+    padding-bottom: 10px;
+    font-size: medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.details-info button{
+    background-color: #daead7;
+    border: none;
+    height: 30px;
+    width: 80px;
+    border-radius: 999px;
+    cursor: pointer;
+}
