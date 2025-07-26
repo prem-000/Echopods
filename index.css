@@ -89,9 +89,23 @@
         width: 180px;
         border-radius: 999px;
         border: 2px solid transparent;
+        max-width: 180px;
         /*caret-shape: var();*/
         animation: border-color 3s ease-in-out infinite alternate-reverse;
     }
+
+    /*@media screen and (max-width: 180px) {
+        .information input {
+            width: 90px;
+        }
+    }
+
+    @media screen and (min-width: 181px) {
+        .information input {
+            width: 180px;
+        }
+    }*/
+
 
     @keyframes border-color {
         0% {
@@ -122,6 +136,15 @@
     cursor: pointer;
     }
 
+    /*@media screen and (min-width: 90px) {
+        .information i{
+            position: relative;
+            left: 170px;
+            transform: translateY(-26px);
+        }
+        
+    }*/
+
     .cointainer {
         display: flex;
         overflow-x: auto;
@@ -132,7 +155,7 @@
         background-color: whitesmoke;
         border: none;
         flex: 0 0 auto;
-        height: 200px;
+        height: 210px;
         width: 180px;
         border-radius: 8%;
         margin: 15px;
@@ -147,8 +170,8 @@
 
     .cointainer button:hover{
         transform: scale(1.2);
-        height: 205px;
-        border-radius: 10%;
+        height: 250px;
+        border-radius: 50px;
     }
 
     .cointainer button1{
@@ -160,7 +183,7 @@
         height: 20px;
         width: 48px;
         border-radius: 999px;
-        transform: translateY(-15px);
+        transform: translateY(-25px);
         cursor: pointer;
     }
 
@@ -171,7 +194,7 @@
         justify-content: center;
     }
 
-    .itemsinfo button1{
+    button1{
         height: 18px;
         width: 50px;
         border-radius: 999px;
@@ -186,26 +209,25 @@
     }
 
     .type-buds img{
-        height: 110px;
+        height: 150px;
         width: 180px;
         object-fit: cover;
         border-radius: inherit;
         filter: brightness(1);
-        transform: translateY(-5px);
+        transform: translateY(-15px);
     }
 
-    .type-buds img:hover{
-        transform: translateY(-10px);
-    }
+    
 }
 
-.login-info{
-    height: 40vh;
+.login-info ,.location-update{
+    height: 38vh;
     display: flex;
     flex-direction: column;
     padding-left: 25px;
     background-color: rgb(173, 216, 230);  
     border-radius: 30px;
+    
 }
 
 .details-info div{
@@ -223,3 +245,15 @@
     border-radius: 999px;
     cursor: pointer;
 }
+
+.details-btn p3{
+    
+    font-size: smaller;
+    display: flex;
+    flex-direction: flex-start;
+    padding-left: 5px;
+    
+}
+
+
+    
