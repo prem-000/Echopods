@@ -3,133 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EchoPods</title>
     <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!--<div <class="topbar">-->
-        <header class="logo">
-            <h1>𝔼𝕔𝕙𝕠ℙ𝕠𝕕𝕤</h1>
-            <img src="https://img.icons8.com/?size=100&id=6983&format=png&color=000000" width="80px" height="80px" border-radius="999px" alt="logo">
-        </header>
-        <div class="selection">
-            <select>
-                    <option value="-">Buds`typs</option>
-                    <option value="--">Speakers</option>
-                    <option value="---"></option>
-            </select>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" target="_page">
+    <!-- Header -->
+    <header class="logo">
+        <h1>𝔼𝕔𝕙𝕠ℙ𝕠𝕕𝕤</h1>
+        
+    </header>
 
-            <div>
-                <nav>
-                    <label>
-                        <button class="cart-icon" id="cart-icon" onclick="changeEvent1()">
+    <!-- Selection -->
+    <div class="selection">
+        <select>
+            <option value="-">Buds Types</option>
+            <option value="--">Speakers</option>
+            <option value="---">---</option>
+        </select>
+
+        <div>
+            <nav>
+                <label>
+                    <button class="cart-icon" id="cart-icon" onclick="changeEvent1()">
                         <i class="fas fa-shopping-cart"></i>
-                        </button>
-                        <button class="user-icon"   id="user-icon" onclick="changeEvent()" >
-                        <i class="fas fa-user" ></i>
-                        </button>
-                        <label class="information">
-                        <input  type="text" placeholder="Search" required />
-                        <i class="fas fa-search"></i>
-                        </label>
-                    </label>
-                </nav>
-            </div>
-
-            
-        </div>
-
-        <div class="type-buds">
-            <div class="type-inear">
-                <nav>
-                    <h3>Type:IN-EAR<b></h3>
-                    <div class="cointainer">
-                    <button class="itemsinfo">
-                        <img src="https://images.unsplash.com/photo-1505236273191-1dce886b01e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZWFyYnVkc3xlbnwwfHwwfHx8MA%3D%3D" alt="icon">
-                        <button2>details</button2>
-                        <p>Model: Noise N1</p>
-                        <button1 id="buy">buy</button1>
                     </button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="type:semi-inear">
-                <nav>
-                    <h3>Type:Semi-inEar<b></h3>
-                    <div class="cointainer">
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="type:wireless">
-                <nav>
-                    <h3>Type:Wireless<b></h3>
-                    <div class="cointainer">
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="type:Canal-type">
-                <nav>
-                    <h3>Type:Canal<b></h3>
-                    <div class="cointainer">
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    <button>1</button>
-                    </div>
-                </nav>
-            </div>
+                    <button class="user-icon" id="user-icon" onclick="changeEvent()">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <label class="information">
+                        <input type="text" placeholder="Search" id="search" required />
+                        <i class="fas fa-search" id="search-btn"></i>
+                        <p id="search-output" style="display: none;"></p>
+                    </label>
+                    <p id="products"></p>
+                </label>
+            </nav>
         </div>
-        <!--<footer>
-            
-        </footer>-->
     </div>
+
+    <!-- Product Sections -->
+<div class="type-buds">
+
+    <!-- IN-EAR SECTION -->
+    <div class="type-inear">
+        <h3>Type: IN-EAR</h3>
+        <div class="cointainer">
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="0">details</button2>
+                <p>Model: Noise N1</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="1">details</button2>
+                <p>Model: Boat Airdopes 141</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="2">details</button2>
+                <p>Model: Realme Buds Air 3</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="3">details</button2>
+                <p>Model: OnePlus Nord Buds</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="4">details</button2>
+                <p>Model: JBL Wave 200</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="5">details</button2>
+                <p>Model: Boult Audio Omega</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="6">details</button2>
+                <p>Model: Mivi DuoPods M80</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+        </div>
+    </div>
+
+    <!-- SEMI-IN-EAR SECTION -->
+    <div class="type-semi-inear">
+        <h3>Type: Semi-inEar</h3>
+        <div class="cointainer">
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="7">details</button2>
+                <p>Model: Skullcandy Indy</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="8">details</button2>
+                <p>Model: Apple AirPods 2</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="9">details</button2>
+                <p>Model: Huawei FreeBuds 4</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="10">details</button2>
+                <p>Model: Oppo Enco Free 2</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="11">details</button2>
+                <p>Model: Samsung Galaxy Buds Live</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="12">details</button2>
+                <p>Model: Sony LinkBuds S</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="13">details</button2>
+                <p>Model: Honor Choice Earbuds X</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="14">details</button2>
+                <p>Model: QCY T13</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="15">details</button2>
+                <p>Model: Lenovo HT28</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+        </div>
+    </div>
+
+    <!-- WIRELESS SECTION -->
+    <div class="type-wireless">
+        <h3>Type: Wireless</h3>
+        <div class="cointainer">
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="16">details</button2>
+                <p>Model: Noise Air Buds 2</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="17">details</button2>
+                <p>Model: Sony WF-1000XM4</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="18">details</button2>
+                <p>Model: Bose QC Earbuds II</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="19">details</button2>
+                <p>Model: Beats Studio Buds</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="20">details</button2>
+                <p>Model: Sennheiser Momentum TW3</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="21">details</button2>
+                <p>Model: Jabra Elite 7</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="22">details</button2>
+                <p>Model: Cambridge Audio Melomania</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="23">details</button2>
+                <p>Model: Soundcore Liberty 3</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="24">details</button2>
+                <p>Model: Edifier TWS NB2</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+        </div>
+    </div>
+
+    <!-- CANAL SECTION -->
+    <div class="type-canal">
+        <h3>Type: Canal</h3>
+        <div class="cointainer">
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="25">details</button2>
+                <p>Model: Tribit FlyBuds C1</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="26">details</button2>
+                <p>Model: JBL Endurance RunBT</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="27">details</button2>
+                <p>Model: AKG N400</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="28">details</button2>
+                <p>Model: RHA T20 Wireless</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="29">details</button2>
+                <p>Model: Shure AONIC 215</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="30">details</button2>
+                <p>Model: 1More Triple Driver</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="31">details</button2>
+                <p>Model: FiiO FH5s</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="32">details</button2>
+                <p>Model: KZ ZS10 Pro</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="33">details</button2>
+                <p>Model: Moondrop Aria</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+            <button class="itemsinfo">
+                <button2 class="details-btn itemsinfo" data-index="34">details</button2>
+                <p>Model: TinHiFi T2</p>
+                <button1 class="itemsinfo" id="buy">buy</button1>
+            </button>
+        </div>
+    </div>
+</div>
+
     <script src="index.js" defer></script>
 </body>
 </html>
