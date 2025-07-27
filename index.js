@@ -316,18 +316,13 @@ searchBtn.addEventListener("click", () => {
     document.body.appendChild(container);
 });
 
+// function changeEvent() {
+//   window.location.href = "profile.html";
+// }
 
-
-
-
-
-function changeEvent() {
-  window.location.href = "profile.html";
-}
-
-function changeEvent1() {
-  document.body.textContent = "";
-}
+// function changeEvent1() {
+//   document.body.textContent = "";
+// }
 
 
 function changeEvent(name,Number,email) {
@@ -338,7 +333,14 @@ function changeEvent(name,Number,email) {
 }
 
 function changeEvent1(){
-    document.body.textContent="";
+    window.Location.innerHTML="cart.html";
 }
+
+
+
+
+
+
+
 
 
