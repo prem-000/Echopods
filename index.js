@@ -329,8 +329,8 @@ searchBtn.addEventListener("click", () => {
             cancelIcon.className = 'cancelicon';
             cancelIcon.id = 'clearSearch';
             cancelIcon.innerHTML = '&times;';
+            cancelIcon.style.cursor="pointer";
             container.appendChild(cancelIcon);
-
             document.body.appendChild(container);
 
             cancelIcon.addEventListener('click', () => {
