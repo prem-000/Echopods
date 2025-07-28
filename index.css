@@ -344,38 +344,9 @@
 }
 
 
-.cancelicon {
-    display: inline-flex;       /* Makes content centerable */
-    align-items: center;        /* Vertical center */
-    justify-content: center;    /* Horizontal center */
-    font-size: 16px;
-    color: rgb(233, 30, 30);
-    cursor: pointer;
-    text-align: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    font-size: medium;
-    transition: text-allign 2s ease;
-    transform: translateX(-1000px);
-    background-color: rgb(224, 243, 179);
-}
 
-.cancelicon:active{
-    height: 40px;
-    width: 80px;
-    border-radius: 999px;
-    background-color: #39ff14;
-    color: black;
-    /* transition: all 1s ease-in; */
-}
 
-/* Remove default <h3> margin if used inside */
-.cancelicon h3 {
-    margin: 0;
-    padding: 0;
-    transform: none;
-}
+
 
 
 
