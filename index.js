@@ -233,21 +233,15 @@ const productData = [
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const detailsButtons = document.querySelectorAll("button2.details-btn");
-
-  
+  const detailsButtons = document.querySelectorAll("button.details-btn");
 
   detailsButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        
       const index = button.getAttribute("data-index");
-
-    const modelParagraph = button.parentElement.querySelector("p");
-    if (modelParagraph) {
+      const modelParagraph = button.parentElement.querySelector("p");
+      if (modelParagraph) {
         modelParagraph.style.display = "none";
-    }
-    
-
+      }
 
       // Check if details container exists, otherwise create it
       let detailsContainer = button.parentElement.querySelector(".product-details");
@@ -255,25 +249,25 @@ document.addEventListener("DOMContentLoaded", () => {
         detailsContainer = document.createElement("div");
         detailsContainer.classList.add("product-details");
         button.insertAdjacentElement("afterend", detailsContainer);
-      } else if(!detailsContainer){
-        detailsContainer.innerHTML = `...`; // update content
-        detailsContainer.classList.add("details-btn");
       } else {
-        detailsContainer.style.display="none";
-        modelParagraph.style.display="block";
+        // Toggle visibility
+        if (detailsContainer.style.display === "block") {
+          detailsContainer.style.display = "none";
+          if (modelParagraph) modelParagraph.style.display = "block";
+          return;
+        } else {
+          detailsContainer.style.display = "block";
+        }
       }
 
       // Insert product details
       const product = productData[index];
       detailsContainer.innerHTML = `
-        <p3><strong>Name :- </strong> ${product.name}</p3>
-        <p3><strong>Battery :- </strong> ${product.battery}</p3>
-        <p3><strong>Price :- </strong> ${product.price}</p3>
-        <p3><strong>Features  </strong> ${product.features.join(", ")}</p3>
+        <p><strong>Name :- </strong> ${product.name}</p>
+        <p><strong>Battery :- </strong> ${product.battery}</p>
+        <p><strong>Price :- </strong> ${product.price}</p>
+        <p><strong>Features :- </strong> ${product.features.join(", ")}</p>
       `;
-      detailsContainer.classList.add("details-btn");
-      
-
     });
   });
 });
@@ -282,79 +276,70 @@ const searchInput = document.getElementById("search");
 const searchBtn = document.getElementById("search-btn");
 
 searchBtn.addEventListener("click", () => {
-    const search = searchInput.value.trim().toLowerCase();
-    
-    if (search === "") return;
+  const search = searchInput.value.trim().toLowerCase();
 
-    // Filter productData
-    const results = productData.filter(product =>
-        product.name.toLowerCase().includes(search)
-    );
+  if (search === "") return;
 
-    // Clear the entire page
-    document.body.innerHTML = "";
+  // Filter productData
+  const results = productData.filter(product =>
+    product.name.toLowerCase().includes(search)
+  );
 
-    // Create a container for results
-    const container = document.createElement("div");
-    container.style.padding = "20px";
-    //container.innerHTML = `<h1>Search Results for "${search}"</h1>`;
+  // Clear the entire page
+  document.body.innerHTML = "";
 
-    // Add results
-    if (results.length === 0) {
-        container.innerHTML += `<p>No results found.</p>`;
-    } else {
-        results.forEach(product => {
-            const card = document.createElement("div");
-            card.className = "product-card";
+  // Create a container for results
+  const container = document.createElement("div");
+  container.style.padding = "20px";
+  container.style.display = "flex";
+  container.style.flexWrap = "wrap";
+  container.style.justifyContent = "center";
+  container.style.gap = "20px";
 
-            // card.style.border = "1px solid #ccc";
-            // card.style.margin = "10px 0";
-            // card.style.padding = "10px";
-            card.innerHTML = `
-                <h3>${product.name}</h3>
-                <p><strong>Battery:</strong> ${product.battery}</p>
-                <p><strong>Price:</strong> ${product.price}</p>
-                <p><strong>Features:</strong> ${product.features.join(", ")}</p>
-                <button1 class="itemsinfo" id="buy">buy</button1>
-            `;
+  // Add results
+  if (results.length === 0) {
+    container.innerHTML = `<p>No results found.</p>`;
+  } else {
+    results.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.style.border = "1px solid #ccc";
+      card.style.padding = "10px";
+      card.style.width = "200px";
 
-            
-            container.style.display = "flex";
-            container.style.flexWrap = "wrap";
-            container.style.justifyContent = "center";
-            
+      card.innerHTML = `
+        <h3>${product.name}</h3>
+        <p><strong>Battery:</strong> ${product.battery}</p>
+        <p><strong>Price:</strong> ${product.price}</p>
+        <p><strong>Features:</strong> ${product.features.join(", ")}</p>
+        <button class="itemsinfo" id="buy">Buy</button>
+      `;
+      container.appendChild(card);
+    });
+  }
 
-            container.appendChild(card);
+  // Add cancel icon
+  const cancelIcon = document.createElement('h3');
+  cancelIcon.className = 'cancelicon';
+  cancelIcon.id = 'clearSearch';
+  cancelIcon.style.cursor = 'pointer';
+  cancelIcon.style.marginLeft = '20px';
+  cancelIcon.innerHTML = '&times;';
+  cancelIcon.title = 'Clear Search';
+  container.appendChild(cancelIcon);
 
-        });
-    }
-    //document.getElementById("container").appendChild(card);
-    document.body.appendChild(container);
+  document.body.appendChild(container);
+
+  cancelIcon.addEventListener('click', () => {
+    window.location.href = "index.html"; // or use window.history.back();
+  });
 });
 
-
-
-
-
-
-// function changeEvent() {
-//   window.location.href = "profile.html";
-// }
-
-// function changeEvent1() {
-//   document.body.textContent = "";
-// }
-
-
-function changeEvent(name,Number,email) {
-    window.location.href="profile.html";
-    //let li=document.createElement("li");
-    //li.classList.add("profile.html");
-    //document.body.appendChild(li);
+// Your navigation functions
+function changeEvent(name, Number, email) {
+  window.location.href = "profile.html";
 }
 
-function changeEvent1(){
-    window.location.href="cart.html";
+function changeEvent1() {
+  window.location.href = "cart.html";
 }
-
-
