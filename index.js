@@ -5,7 +5,7 @@ const productData = [
     battery: "20 hrs",
     price: "₹1,999",
     features: ["Bass Boost", "Waterproof", "Bluetooth 5.3"],
-    image: "https://example.com/images/noise-n1.jpg"
+    image: "https://pin.it/5DD5j6ahd"
   },
   {
     name: "Boat Airdopes 141",
