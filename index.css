@@ -169,7 +169,7 @@
     }
 
     /* Tablets and large phones (landscape) */
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
+    @media screen and (min-width: 300px) and (max-width: 1024px) {
         .information i {
             left: 8px;
             top: 50%;
