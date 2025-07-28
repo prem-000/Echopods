@@ -276,6 +276,7 @@
 }
 
 .footer-btn{
+    border-radius:999px;
     text-align: center;
     background-color: #f1f1f1;
     position: absolute;
