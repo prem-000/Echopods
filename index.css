@@ -160,11 +160,29 @@
     }
     } */
 
-    @media screen and (min-width: 280px) and (max-width: 520px) {
+     @media screen and (max-width: 480px) {
         .information i {
-           
-            
-            transform: translateX(130px) translateY(-20px);
+             left: 8px;
+            top: 50%;
+            transform:  translateX(-35px) translateY(-10%);
+        }
+    }
+
+    /* Tablets and large phones (landscape) */
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .information i {
+            left: 8px;
+            top: 50%;
+            transform:  translateX(-35px) translateY(-10%);
+        }
+    }
+
+    /* Laptops and desktops */
+    @media screen and (min-width: 1050px) {
+        .information i {
+            left: 10px; /* adjust for larger input */
+            top: 50%;
+            transform:  translateX(-35px) translateY(-10%);
             
         }
     }
