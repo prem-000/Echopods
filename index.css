@@ -90,6 +90,7 @@
         border-radius: 999px;
         border: 2px solid transparent;
         max-width: 180px;
+        
         /*caret-shape: var();*/
         animation: border-color 3s ease-in-out infinite alternate-reverse;
     }
@@ -128,22 +129,48 @@
 
     .information i {
     position: relative;
-    left: 0%;
+    left: 0px;
     top:18.8%;
     transform: translateX(-200%);
     font-size: 14px;
     color: gray;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
     }
 
-    /*@media screen and (min-width: 90px) {
-        .information i{
-            position: relative;
-            left: 170px;
-            transform: translateY(-26px);
+    .information i:active{
+        background-color: rgb(222, 221, 221);
+    }
+
+    @media screen and (max-width: 480px) {
+    .information input {
+        width: 150px;
+    }
+    } 
+
+    /* @media screen and (min-width: 481px) and (max-width: 768px) {
+    .information input {
+        width: 180px;
+    }
+    } */
+
+    @media screen and (min-width: 280px) and (max-width: 520px) {
+        .information i {
+           
+            
+            transform: translateX(130px) translateY(-20px);
+            
         }
-        
-    }*/
+    }
+
+
+
 
     .cointainer {
         display: flex;
@@ -220,7 +247,7 @@
     
 }
 
-.login-info ,.location-update{
+.login-info {
     height: 38vh;
     display: flex;
     flex-direction: column;
@@ -228,6 +255,21 @@
     background-color: rgb(173, 216, 230);  
     border-radius: 30px;
     
+}
+
+.footer-btn{
+    height: 60px;
+    width: 1240px;
+    padding-left: 0%;
+    border-radius: 90px;
+    text-align: center;
+    background-color: #f1f1f1;
+    position: absolute;
+    bottom: 0%;
+        :hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
 }
 
 .details-info div{
@@ -254,6 +296,42 @@
     padding-left: 5px;
     
 }
+
+
+ .container card{
+    background-color: #00f9ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+} 
+.product-card{
+    background-color: rgb(248, 253, 231);
+    border: none;
+    flex: 0 0 auto;
+    height: 220px;
+    width: 180px;
+    border-radius: 8%;
+    margin: 15px;
+    transform: scale(1.05);
+    transition: transform 0.1s;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: smaller;
+}
+
+.product-card:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
 
 
     
