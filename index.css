@@ -343,7 +343,163 @@
     transition: transform 0.3s ease;
 }
 
+/* index.css */
 
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header section */
+header.login-info {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.details-info h1 {
+  font-size: 32px;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.details-info div {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.details-info button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.details-info button:hover {
+  background-color: #357ab8;
+}
+
+/* Address Section */
+address form {
+  background-color: #fff;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+address p1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+address ul {
+  margin-top: 10px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+address button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #6ab04c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+address button:hover {
+  background-color: #4e9635;
+}
+
+/* Support Section */
+section {
+  margin-top: 20px;
+}
+
+section p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section ul {
+  margin-top: 8px;
+  list-style: circle;
+  padding-left: 20px;
+}
+
+section p1 {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Settings Section */
+settings {
+  display: block;
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+settings label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+settings ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: square;
+}
+
+/* Login/Logout Section */
+login {
+  margin-top: 20px;
+}
+
+login button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+login button:hover {
+  background-color: #c0392b;
+}
+
+/* Footer */
+footer.footer-btn {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 10px;
+}
 
 
 
