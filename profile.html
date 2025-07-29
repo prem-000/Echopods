@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link href="index.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - EchoPods</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <header class="login-info">
-        <div class="details-info">
-        <h1>𝔼𝕔𝕙𝕠ℙ𝕠𝕕𝕤</h1>
-        <div>Name:-${name}</div>
-        <div>Mobile No:-${Number}</div>
-        <div type="email">Email:-</div>
-        <button>Edit✎</button>
-        <button value="login">Login👥</button>
-        </div>
-    <header>
-    <address>
-        <form>
-            <p1>Saved Address</p1>
-            <ul>
-                <ol>Location</ol>
-                <ol>Work</ol>
-                <ol>Delivery Addresses</ol>
-            </ul>
-           <button>Add/Edit</button>
-        </form>
-    </address>
-    <section>
-        <pclass="fas fa-phone">Suppeort and Help</p>
-        <p1>
-            <ul>
-                <ol>customer Support Access</ol>
-                <ol>Raise a Ticket</ol>
-                <ol>Chat/Call with Support</ol>
-            </ul>
-        </p1>
-    <settings class="fas fa-settings">
-        <label>Settings</label>
-            <details>
-                <ul>
-                    <ol>Notification Prefernces</ol>
-                    <ol>Language/Region Settings</ol>
-                    <ol>Privacy Settings</ol>
-                </ul>
-            </details>
-    </settings>
-    <login>
-        <button>Logout</button>
-        <button>Delete Account</button>
-    </login>
-    </section>
-    <footer class="footer-btn">
-        <h5>&copy; 2025 Echopods. All rights reserved.</h5>
-        <h6>All Done By Prema Sai Kuruva</h6>
-    </footer>
 
+  <!-- Header -->
+  <header class="login-info">
+    <div class="details-info">
+      <h1>𝔼𝕔𝕙𝕠ℙ𝕠𝕕𝕤</h1>
+      <div><strong>Name:</strong> ${name}</div>
+      <div><strong>Mobile No:</strong> ${Number}</div>
+      <div><strong>Email:</strong> example@email.com</div>
+      <button>Edit ✎</button>
+      <button>Login 👥</button>
+    </div>
+  </header>
 
+  <!-- Address Section -->
+  <section class="address-section">
+    <h2>Saved Address</h2>
+    <ul>
+      <li>Location</li>
+      <li>Work</li>
+      <li>Delivery Addresses</li>
+    </ul>
+    <button>Add/Edit</button>
+  </section>
+
+  <!-- Support Section -->
+  <section class="support-section">
+    <h2>Support and Help</h2>
+    <ul>
+      <li>Customer Support Access</li>
+      <li>Raise a Ticket</li>
+      <li>Chat/Call with Support</li>
+    </ul>
+  </section>
+
+  <!-- Settings Section -->
+  <section class="settings-section">
+    <h2>Settings</h2>
+    <details>
+      <summary>Open Settings</summary>
+      <ul>
+        <li>Notification Preferences</li>
+        <li>Language/Region Settings</li>
+        <li>Privacy Settings</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- Account Section -->
+  <section class="login-section">
+    <button>Logout</button>
+    <button>Delete Account</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-btn">
+    <h5>&copy; 2025 EchoPods. All rights reserved.</h5>
+    <h6>All Done By Prema Sai Kuruva</h6>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
 </body>
-    <script src="index.js"></script>
 </html>
