@@ -265,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Insert product details
       const product = productData[index];
+      //detailsContainer.style.
       detailsContainer.innerHTML = `
         <p3><strong>Name :- </strong> ${product.name}</p3>
         <p3><strong>Battery :- </strong> ${product.battery}</p3>
@@ -311,11 +312,13 @@ searchBtn.addEventListener("click", () => {
             // card.style.margin = "10px 0";
             // card.style.padding = "10px";
             card.innerHTML = `
+              <div>
                 <h3>${product.name}</h3>
                 <p><strong>Battery:</strong> ${product.battery}</p>
                 <p><strong>Price:</strong> ${product.price}</p>
                 <p><strong>Features:</strong> ${product.features.join(", ")}</p>
                 <button1 class="itemsinfo" id="buy">buy</button1>
+              </div>
             `;
 
             
@@ -331,6 +334,7 @@ searchBtn.addEventListener("click", () => {
             cancelIcon.innerHTML = '&times;';
             cancelIcon.style.cursor="pointer";
             container.appendChild(cancelIcon);
+
             document.body.appendChild(container);
 
             cancelIcon.addEventListener('click', () => {
@@ -365,5 +369,31 @@ function changeEvent(name,Number,email) {
 function changeEvent1(){
     window.location.href="cart.html";
 } 
+
+// for the buy button 
+const buyingButtons = document.querySelectorAll(".buy");
+
+buyingButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const productName = button.getAttribute("data-name").toLowerCase();
+
+    const product = productData.find(
+      (item) => item.name.toLowerCase() === productName
+    );
+
+    if (product) {
+      // Save product to localStorage
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      cartItems.push(product);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Redirect to cart page
+      window.location.href = "cart.html";
+    } else {
+      alert("Product not found!");
+    }
+  });
+});
+
 
 
